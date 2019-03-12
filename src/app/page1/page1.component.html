@@ -1,0 +1,4 @@
+<div *ngFor="let student of students" [routerLink]="['/page2', student.nim]">
+  <p>{{student.nim}}</p>
+  <p>{{student.nama}}</p>
+</div>
