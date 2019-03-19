@@ -1,12 +1,21 @@
-<div>
+<!-- <div>
   <a [routerLink]="['/page1']">Page1</a>
 </div>
 <div>
   <a [routerLink]="['/page2']">Page2</a>
-</div>
+</div> -->
 
+<mat-toolbar color="accent">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/page1']">Page 1</button>
+  </mat-menu>
+
+  Web Tech 2 Mini Project
+</mat-toolbar>
 <router-outlet></router-outlet>
 
+<!-- 
 <div>
   This is footer
-</div>
+</div> -->

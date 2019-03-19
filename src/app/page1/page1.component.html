@@ -1,4 +1,23 @@
-<div *ngFor="let student of students" [routerLink]="['/page2', student.nim]">
+<mat-card class="student-card" *ngFor="let student of students">
+  <mat-card-header>
+    <mat-card-title>{{student.nim}}</mat-card-title>
+    <mat-card-subtitle>{{student.nama}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="student.img" [alt]="'Photo of ' + student.nama">
+  <mat-card-content>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" [routerLink]="['/page2', student.nim]">View Detail</button>
+  </mat-card-actions>
+</mat-card>
+
+<!-- <mat-card class="student-card" *ngFor="let student of students" [routerLink]="['/page2', student.nim]">
   <p>{{student.nim}}</p>
   <p>{{student.nama}}</p>
-</div>
+</mat-card> -->
+
+<!-- <div *ngFor="let student of students" [routerLink]="['/page2', student.nim]">
+  <p>{{student.nim}}</p>
+  <p>{{student.nama}}</p>
+</div> -->

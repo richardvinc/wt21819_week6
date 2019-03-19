@@ -4,4 +4,5 @@ export class Student {
   prodi: string;
   ipk: number;
   matkul: Array<string>;
+  img?: string;
 }

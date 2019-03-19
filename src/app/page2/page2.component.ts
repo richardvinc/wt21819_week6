@@ -23,7 +23,7 @@ export class Page2Component implements OnInit {
       this.nim = +element.get("nim"); //convert string to number
       console.log(this.nim);
 
-      this.student = this.dataService.getStudent(this.nim);
+      this.student = this.dataService.getStudent(this.nim)[0];
     });
   }
 }
