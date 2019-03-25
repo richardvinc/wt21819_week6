@@ -4,8 +4,9 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatExpansionModule } from "@angular/material/expansion";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
-let mt = [MatCardModule, MatButtonModule, MatToolbarModule, MatMenuModule, MatExpansionModule];
+let mt = [MatCardModule, MatButtonModule, MatToolbarModule, MatMenuModule, MatExpansionModule, MatProgressSpinnerModule];
 
 @NgModule({
   declarations: [],

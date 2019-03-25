@@ -1,3 +1,5 @@
+<mat-spinner *ngIf="!pokemons"></mat-spinner>
+
 <mat-card class="student-card" *ngFor="let pokemon of pokemons">
   <mat-card-header>
     <mat-card-title>{{pokemon.name}}</mat-card-title>
