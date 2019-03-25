@@ -14,7 +14,6 @@ const routes: Routes = [
     component: Page1Component
   },
   {
-    //buat path page2 dan buat page2 untuk menerima parameter bernama "nim"
     path: "page2/:name",
     component: Page2Component
   }
