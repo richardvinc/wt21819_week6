@@ -9,9 +9,8 @@ import { DataService } from "../data.service";
   styleUrls: ["./page2.component.css"]
 })
 export class Page2Component implements OnInit {
-  //buat penampung untuk parameter
-  nim: number = null;
-  student: Student = null;
+  name = null;
+  pokemon = null;
 
   //terima paramater yang dioper
   constructor(private route: ActivatedRoute, private dataService: DataService) {}
@@ -20,10 +19,11 @@ export class Page2Component implements OnInit {
     //telusuri semua parameter yang diberikan
     this.route.paramMap.subscribe(element => {
       //cari apakah ada parameter yang namanya "nim"
-      this.nim = +element.get("nim"); //convert string to number
-      console.log(this.nim);
+      this.name = element.get("name"); //convert string to number
 
-      this.student = this.dataService.getStudent(this.nim)[0];
+      this.dataService.getPokemon(this.name).subscribe(pokemon => {
+        this.pokemon = pokemon;
+      });
     });
   }
 }

@@ -1,17 +1,23 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
-import { Student } from "../student";
+
 @Component({
   selector: "app-page1",
   templateUrl: "./page1.component.html",
   styleUrls: ["./page1.component.css"]
 })
 export class Page1Component implements OnInit {
-  students: Array<Student> = null;
+  pokemons = null;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.students = this.dataService.getStudents();
+    // this.students = this.dataService.getStudents();
+    this.dataService.getPokemons().subscribe(data => {
+      console.log(data);
+      this.pokemons = data["results"];
+    });
   }
 }
+
+//https://pokeapi.co/api/v2/pokemon
